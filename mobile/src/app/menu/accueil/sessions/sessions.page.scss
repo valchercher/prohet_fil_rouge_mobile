@@ -1,0 +1,21 @@
+.no-border-checkbox ion-checkbox {
+  --background: none;
+  border: none;
+}
+.table-auto th {
+  margin-right: 10px; /* Ajoutez l'espace horizontal souhaité */
+}
+
+.custom-checkbox:disabled {
+  /* Styles pour la case à cocher désactivée */
+  /* Par exemple, réduire l'opacité pour la désactiver visuellement */
+  opacity: 0.5;
+  cursor: not-allowed; /* Optionnel : changer le curseur */
+}
+ion-card {
+  padding: 0px;
+  margin: 2px;
+}
+ion-card-title{
+  font-size: 15px;
+}

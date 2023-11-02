@@ -1,0 +1,49 @@
+{
+  "name": "ngx-tailwind",
+  "version": "4.0.0",
+  "description": "Add Tailwind CSS to an Angular Workspace",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc -p tsconfig.json --watch",
+    "test": "npm run build && jasmine src/**/*_spec.js",
+    "start:dev": "npm run build && cd angular-workspace && schematics ..:ng-add",
+    "start": "npm run build && cd angular-workspace && schematics ..:ng-add --debug false",
+    "changelog": "conventional-changelog -p angular -i ./CHANGELOG.md -s",
+    "rocket": "npm run build && npm publish"
+  },
+  "keywords": [
+    "angular",
+    "schematics",
+    "tailwindcss"
+  ],
+  "author": "Gary Großgarten",
+  "contributors": [
+    {
+      "name": "Marc Stammerjohann",
+      "url": "https://notiz.dev/authors/marc-stammerjohann"
+    }
+  ],
+  "license": "MIT",
+  "schematics": "./src/collection.json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/notiz-dev/ngx-tailwind.git"
+  },
+  "bugs": {
+    "url": "https://github.com/notiz-dev/ngx-tailwind/issues"
+  },
+  "ng-add": {
+    "save": "devDependencies"
+  },
+  "dependencies": {
+    "@angular-devkit/core": "^14.0.5",
+    "@angular-devkit/schematics": "^14.0.5",
+    "@angular/cdk": "~14.0.4",
+    "@schematics/angular": "^14.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "prettier": "~2.7.1",
+    "typescript": "~4.7.4"
+  }
+}

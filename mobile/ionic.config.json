@@ -1,0 +1,7 @@
+{
+  "name": "ODC_FR_Academy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

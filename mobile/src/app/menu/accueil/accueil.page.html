@@ -1,0 +1,71 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Menu Content</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="bg-red-200" [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ accueil }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="bg-slate-300 ">
+   <div class="flex">
+    <ion-card class="w-2/4" (click)="selectCours()">
+      <img alt="" class="bg-slate-400" src="/assets/images/images.jpeg" />
+      <ion-card-header  class="">
+        <ion-card-title class="text-blue-600 font-bold">COURS</ion-card-title>
+        <ion-card-subtitle></ion-card-subtitle>
+      </ion-card-header>
+
+      <!-- <ion-card-content>
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content> -->
+    </ion-card>
+    <ion-card class="w-2/4" (click)="selectSession()">
+      <img alt="Silhouette of mountains" src="./assets/images/calendrier-a.jpg" />
+      <ion-card-header>
+        <ion-card-title class="text-red-700 font-bold">SESSION</ion-card-title>
+        <ion-card-subtitle></ion-card-subtitle>
+      </ion-card-header>
+
+      <!-- <ion-card-content>
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content> -->
+    </ion-card>
+   </div>
+    <div class="flex">
+      <ion-card class="w-2/4" (click)="selectAbsence()">
+        <img alt="Silhouette of mountains" src="./assets/images/absence.png" />
+        <ion-card-header>
+          <ion-card-title class="font-bold text-violet-500 ">ABSENCE</ion-card-title>
+          <ion-card-subtitle></ion-card-subtitle>
+        </ion-card-header>
+
+        <!-- <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content> -->
+      </ion-card>
+      <ion-card class="w-2/4" (click)="selectConvocation()">
+        <img alt="Silhouette of mountains" src="./assets/images/images (1).jpeg" />
+        <ion-card-header>
+          <ion-card-title class="text-red-500 font-bold">CONVOCATION</ion-card-title>
+          <ion-card-subtitle></ion-card-subtitle>
+        </ion-card-header>
+
+        <!-- <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content> -->
+      </ion-card>
+    </div>
+  </div>
+  <!-- <div id="container">
+    <strong class="capitalize">{{ accueil }}</strong>
+    <p>Explorer <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div> -->
+</ion-content>
+

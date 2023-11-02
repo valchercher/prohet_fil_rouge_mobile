@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "NGX_ADD_TAILWIND",
+  "title": "Angular Tailwind CSS Schematics",
+  "type": "object",
+  "description": "Add Tailwind CSS to an Angular project",
+  "properties": {
+    "autoprefixerVersion": {
+      "type": "string",
+      "description": "The autoprefixer version to be installed.",
+      "default": "^10.4.7"
+    },
+    "cssFormat": {
+      "description": "The file extension or preprocessor to use for style files.",
+      "type": "string",
+      "default": "css",
+      "enum": ["css", "scss"],
+      "x-prompt": {
+        "message": "Which stylesheet format are you using?",
+        "type": "list",
+        "items": [
+          {
+            "value": "css",
+            "label": "CSS"
+          },
+          {
+            "value": "scss",
+            "label": "SCSS [ https://sass-lang.com/documentation/syntax#scss ]"
+          }
+        ]
+      }
+    },
+    "project": {
+      "type": "string",
+      "description": "The project in which we want to generate our component",
+      "$default": {
+        "$source": "projectName"
+      }
+    },
+    "postcssVersion": {
+      "type": "string",
+      "description": "The postcss version to be installed.",
+      "default": "^8.4.14"
+    },
+    "tailwindPlugins": {
+      "description": "@tailwindcss plugins installed and added to tailwind.config.js",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": ["aspect-ratio", "forms", "line-clamp", "typography"],
+        "type": "string"
+      },
+      "x-prompt": "Which @tailwindcss plugins do you want to install?"
+    },
+    "tailwindVersion": {
+      "type": "string",
+      "description": "The Tailwind version to be installed.",
+      "default": "^3.1.6"
+    }
+  }
+}

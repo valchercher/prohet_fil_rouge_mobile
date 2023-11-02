@@ -1,0 +1,43 @@
+<ion-app>
+  <ion-split-pane contentId="main-content" class="">
+    <ion-menu contentId="main-content" class="" type="overlay">
+      <ion-content class="bg-slate-500">
+        <ion-list id="inbox-list">
+          <ion-row>
+            <ion-col size="auto">
+              <ion-avatar>
+                <img alt="Silhouette of a person's head" src="./assets/images/Capture d’écran du 2023-04-29 02-07-40.png" />
+              </ion-avatar>
+            </ion-col>
+            <ion-col size="auto">
+              <ion-list>
+                <ion-list-header>{{user.prenom+" "+user.nom}}</ion-list-header>
+                <ion-note>{{user.email}}</ion-note>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label class="font-bold text-violet-800">{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+        <!-- <ion-list id="labels-list">
+          <ion-list-header>Labels</ion-list-header>
+          <ion-item *ngFor="let label of labels" lines="none">
+            <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+            <ion-label>{{ label }}</ion-label>
+          </ion-item>
+        </ion-list> -->
+      </ion-content>
+      <ion-footer>
+       <ion-row>
+
+         <ion-button routerDirection="root" [routerLink]="['/']" lines="none" detail="false" routerLinkActive="selected" (click)="deconnecter()">se deconnecter</ion-button>
+       </ion-row>
+      </ion-footer>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

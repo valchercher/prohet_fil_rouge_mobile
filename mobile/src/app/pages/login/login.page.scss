@@ -1,0 +1,22 @@
+ion-content{
+
+    --ion-background-color:rgb(128, 0, 128), rgb(255, 20, 147) !important;
+ }
+//  ion-toolbar{
+//     --ion-background-color:transparent;
+//     --opacity:0;
+//  }
+// ion-header{
+//     position: absolute;
+// }
+.custom-gradient {
+  --background: linear-gradient(to right, rgb(128, 0, 128), rgb(255, 20, 147));
+  background: var(--background);
+}
+.bg-gelap{
+  background: rgb(128, 0, 128), rgb(255, 20, 147);
+
+}
+.bg-btn{
+  background-color: #0a0f9b;
+}
